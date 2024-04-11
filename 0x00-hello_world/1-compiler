@@ -1,0 +1,5 @@
+#!/bin/bash
+
+gcc -c $CFILE -0 ${CFILE%.c}.o
+
+
