@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <cs50.h>
 
 void puts2(char *str);
 void puts2(char *str){
@@ -13,7 +14,7 @@ void puts2(char *str){
 
 int main (void){
 
-    char *str="0123456789";
+    char *str=get_string("Enter input: ");
     puts2(str);
     return 0;
 }
