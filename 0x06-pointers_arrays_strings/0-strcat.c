@@ -5,11 +5,11 @@ char *_strcat(char *dest, char *src);
 char *_strcat(char *dest, char *src){
     int i = 0;
     int d = 0;
-    while (i != '\0'){
+    while (dest[i] != '\0'){
         dest[i];
         i++;
     }
-    while (d != '\0')
+    while (src[d] != '\0')
     {
         dest[i] = src[d];
         i++;
@@ -20,7 +20,7 @@ char *_strcat(char *dest, char *src){
 }
 int main (void){
     char d[50] = "Hello";
-    char s[20] = "world";
+    char s[20] = " world! \n";
 
     char *f=_strcat(d,s);
     printf("%s \n",f);
