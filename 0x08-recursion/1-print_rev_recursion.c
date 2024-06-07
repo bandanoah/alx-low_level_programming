@@ -11,7 +11,7 @@ void _print_rev_recursion(char *s)
     {
         return;
     }
-    
+    //recursive call that calls itself
     _print_rev_recursion(s + 1);
     putchar(*s);
      
