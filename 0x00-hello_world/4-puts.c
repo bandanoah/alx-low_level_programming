@@ -15,10 +15,11 @@
  */
 int main(void)
 {
-	const char *message = "Programming is like building a multilingual puzzle.";
+	const char *message = "Programming is like building a multilingual puzzle";
 
 	/* Print the message using puts */
 	puts(message);
 
 	return (0);
 }
+
