@@ -1,11 +1,26 @@
+/*
+ * File: size_of_types.c
+ * Author: [Your Name]
+ *
+ * This program prints the size of various types on the computer it is compiled and run on.
+ * It demonstrates how to determine the size of different types using the sizeof operator.
+ */
+
 #include <stdio.h>
-int main (){
 
-    printf("size of char: %zu byte(s)\n", sizeof(char));
-    printf("size of int: %zu byte(s)\n", sizeof(int));
-    printf("size of long: %zu byte(s)\n", sizeof(long));
-    printf("size of float: %zu byte(s)\n", sizeof(float));
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    printf("Size of a char: %ld byte(s)\n", sizeof(char));
+    printf("Size of an int: %ld byte(s)\n", sizeof(int));
+    printf("Size of a long int: %ld byte(s)\n", sizeof(long int));
+    printf("Size of a long long int: %ld byte(s)\n", sizeof(long long int));
+    printf("Size of a float: %ld byte(s)\n", sizeof(float));
 
-    return 0;
-    
+    return (0);
 }
+
