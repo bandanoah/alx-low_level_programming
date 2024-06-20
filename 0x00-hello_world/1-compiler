@@ -1,4 +1,4 @@
 #!/bin/bash
-gcc -c $CFILE -0 ${CFILE%.c}.o
+gcc -c $CFILE -o ${CFILE%.c}.o
 
 
