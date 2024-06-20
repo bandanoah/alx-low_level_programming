@@ -1,8 +1,22 @@
+/*
+ * File: piece_of_art.c
+ * Author: [Your Name]
+ *
+ * This program prints a piece of art with proper grammar using the printf function.
+ * It demonstrates how to use printf to output formatted text to the standard output.
+ */
+
 #include <stdio.h>
-int main () {
 
-	const char *message="with proper grammar, but the outcome is a piece of art";
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    printf("%s, but the outcome is a piece of art,\n", "with proper grammar");
 
-	printf("%s\n", message);
-	return 0;
+    return (0);
 }
+
