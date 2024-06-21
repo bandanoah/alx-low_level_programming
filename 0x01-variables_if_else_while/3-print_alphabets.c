@@ -1,21 +1,23 @@
 #include <stdio.h>
 
-int main (void){
+int main (void)
+{
 
     char lower= 'a';
     char upper= 'A';
 
-    while (lower <= 'z'){
+    while (lower <= 'z')
+    {
 
         putchar(lower);
         lower++;
     }
-    while (upper <= 'Z'){
+    while (upper <= 'Z')
+    {
 
         putchar(upper);
         upper++;
     }
-
     putchar('\n');
 
     return 0;
