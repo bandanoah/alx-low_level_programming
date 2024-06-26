@@ -1,37 +1,15 @@
-/*#include "main.h"
+#include "main.h"
 
-void print_alphabet(void);
+/**
+ * print_alphabet - Print the alphabet
+ *
+ * Return:void
+ */
 
-
-void print_alphabet(void){
-
-    int n= 'a';
-
-    for (n = 'a'; n <= 'z'; n++){
-
-        _putchar('n');
-    }
-}
-*/
-
-#include <stdio.h>
-
-void print_alphabet(void);
-
-int main (void){
-
-    print_alphabet();
-    putchar('\n');
-}
-
-void print_alphabet(void){
-
-    int n = 'a';
-
-    for (n = 'a'; n <= 'z'; n++){
-
-        putchar(n);
-
-    }
-    
+void print_alphabet(void)
+{
+char ch;
+for (ch = 'a' ; ch <= 'z' ; ch++)
+_putchar(ch);
+_putchar('\n');
 }
