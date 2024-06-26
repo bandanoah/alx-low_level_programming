@@ -1,30 +1,24 @@
-#include <stdio.h>
+#include "main.h"
 
-void print_alphabet(void);
+/**
+ * print_alphabet_x10 - Make alphabet x10
+ *
+ * Return: void
+ */
+void print_alphabet_x10(void)
+{
 
-int main (void){
-
-    int n =0;
-
-    while(n < 10){
-
-        print_alphabet();
-        putchar('\n');
-        n++;
-
-    }
-    
+char ch;
+int i;
+i = 0;
+while (i < 10)
+{
+for (ch = 'a'; ch <= 'z'; ch++)
+{
+_putchar(ch);
+}
+_putchar('\n');
+i++;
 }
 
-void print_alphabet(void){
-
-    int n = 'a';
-
-    for (n = 'a'; n <= 'z'; n++){
-
-        putchar(n);
-
-    }
-    
 }
-

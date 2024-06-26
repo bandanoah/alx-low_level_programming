@@ -1,31 +1,33 @@
 #include <stdio.h>
 
-void print_fibonacci_numbers(void);
+ /**
+  * main - main function
+  *
+  * Description: function to print fibonacci sequence
+  *
+  * Return: Always 0 (Success)
+  *
+  */
 
-void print_fibonacci_numbers(void){
+int main(void)
 
-    int count = 50;
+{
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
 
-    int i = 1;
-    int j = 2;
+	for (count = 0; count < 50; count++)
+	{
 
-    printf("%d, %d, ", i ,j);
+		sum = fib1 + fib2;
+		printf("%lu", sum);
 
-    for (int t =3; t <= count; t++){
+		fib1 = fib2;
+		fib2 = sum;
 
-        int k = i + j;
-        
-        printf("%d, ", k);
-        i = j;
-        j = k;
-
-    }
-    printf("\n");
-}
-
-int main (void){
-
-    print_fibonacci_numbers();
-
-    return 0;
+		if (count == 49)
+			printf("\n");
+		else
+			printf(", ");
+	}
+	return (0);
 }
