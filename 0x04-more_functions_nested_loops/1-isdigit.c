@@ -1,23 +1,12 @@
-#include <stdio.h>
+#include "main.h"
 
-int _isdigit(int c);
+/**
+ * _isdigit - check for a digit (0 through 9)
+ * @c: inter to be checked
+ * Return: 1 if c is a digit, 0 otherwise
+ */
 
-int _isdigit(int c){
-
-    int t;
-    if (t >= 0 && t <= 9 ){
-        
-        printf("is a digit");
-        return 1;
-    }else {
-        printf("is not a digit");
-        return 0;
-    }
-    printf("\n");
-}
-
-int main (void){
-
-    _isdigit(7);
-    return 0;
+int _isdigit(int c)
+{
+return (c >= '0' && c <= '9');
 }

@@ -1,27 +1,32 @@
-#include <stdio.h>
+#include "main.h"
 
-void print_triangle(int size);
+/**
+ * print_triangle - func prints a triangle, using the character #
+ * @size: The size of the triangle
+ */
 
-void print_triangle(int size){
+void print_triangle(int size)
+{
+	if (size <= 0)
+	{
+		_putchar('\n');
+	}
 
-    int i;
-    for (i = 1; i <= size; i++){
-        for (int j = 1; j <= size - i; j++){
-            printf(" ");
-            /*this for loop is the difference btwn the normal
-            loop alignment and this one adding the - i especially
-            affords the loop to fit perfectly*/
-        }
-        for (int k = 1; k <= i; k ++){
-            printf("#");
-        }
-        printf("\n"); 
-    }
-}
+	else
+	{
+		int i, j;
 
-int main (void){
-
-    print_triangle(10);
-
-    return 0;
+		for (i = 1; i <= size; i++)
+		{
+			for (j = i; j < size; j++)
+			{
+				_putchar(' ');
+			}
+			for (j = 1; j <= i; j++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
+		}
+	}
 }

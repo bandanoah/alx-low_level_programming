@@ -1,17 +1,16 @@
-#include <stdio.h>
+#include "main.h"
 
-int mul(int a, int b);
+/**
+ * mul - func checks for checks for a digit (0 through)
+ * @a: a - Variable
+ * @b: b - Variable
+ * Return: Always 0
+ */
 
-int mul(int a, int b){
+int mul(int a, int b)
+{
+	int mul;
 
-    int r= a * b;
-    printf("Product of %d and %d is : %d \n", a , b , r);
-
-    return 1;
-}
-
-int main (void){
-
-    mul(40,20);
-    return 0;
+	mul = a * b;
+	return (mul);
 }
