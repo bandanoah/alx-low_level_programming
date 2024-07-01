@@ -1,20 +1,26 @@
-#include <stdio.h>
-#include <string.h>
-#include <cs50.h>
+#include "main.h"
 
+/**
+ * print_rev - print a string in reverse
+ * @s: string
+ * return: 0
+ */
 
-void print_rev(char *s);
+void print_rev(char *s)
+{
+	int longi = 0;
+	int o;
 
-void print_rev(char *s){
-
-    int len= strlen(s);
-    for(int i = len -1; i >=0; i--){
-        printf("%c",s[i]);
-    }
-    printf("\n");
-}
-int main (void){
-    char *s = get_string("Enter input: \n");
-    print_rev(s);
-    return 0;
+	while (*s != '\0')
+	{
+		longi++;
+		s++;
+	}
+	s--;
+	for (o = longi; o > 0; o--)
+	{
+		_putchar(*s);
+		s--;
+	}
+	_putchar('\n');
 }

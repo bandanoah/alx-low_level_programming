@@ -1,20 +1,31 @@
-#include <stdio.h>
-#include <string.h>
-#include <cs50.h>
+#include "main.h"
 
-void puts2(char *str);
-void puts2(char *str){
-    int i;
-    int len = strlen(str);
-    for (i = 0; i <= len -1; i+=2){
-        printf("%c",str[i]);
-    }
-    printf("\n");
-}
+/**
+ * puts2 - function should print onlt one character out of two
+ * starting with the first one
+ * @str: input
+ * Return: print
+ */
 
-int main (void){
+void puts2(char *str)
+{
+	int longi = 0;
+	int t = 0;
+	char *y = str;
+	int o;
 
-    char *str=get_string("Enter input: ");
-    puts2(str);
-    return 0;
+	while (*y != '\0')
+	{
+		y++;
+		longi++;
+	}
+	t = longi - 1;
+	for (o = 0;  o <= t; o++)
+	{
+		if (o % 2 == 0)
+	{
+		_putchar(str[o]);
+	}
+	}
+	_putchar('\n');
 }

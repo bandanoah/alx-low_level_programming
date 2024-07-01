@@ -1,28 +1,46 @@
-#include <stdio.h>
-#include <string.h>
+#include "main.h"
 
-int _atoi(char *s);
-int _atoi(char *s){
-    int r = 0;
-    int i = 0;
+/**
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
+ *
+ * Return: the int converted from the string
+ */
+int _atoi(char *s)
+{
+	int i, d, n, len, f, digit;
 
-    while (s[i] != '\0'){
+	i = 0;
+	d = 0;
+	n = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
 
-        r = (s[i] - '0');/*this is the part that converts the 
-        string characters into integers which are stored in 
-        the variable r making it easy to print out the integers 
-        after conversion.*/
-        printf("%d",r);
-        i++;
-    }
-    printf("\n");
+	while (s[len] != '\0')
+		len++;
 
-    return r;
-}
-int main (void){
-    char *s;
-    s="78787878";
-    _atoi(s);
+	while (i < len && f == 0)
+	{
+		if (s[i] == '-')
+			++d;
 
-    return 0;
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			digit = s[i] - '0';
+			if (d % 2)
+				digit = -digit;
+			n = n * 10 + digit;
+			f = 1;
+			if (s[i + 1] < '0' || s[i + 1] > '9')
+				break;
+			f = 0;
+		}
+		i++;
+	}
+
+	if (f == 0)
+		return (0);
+
+	return (n);
 }
