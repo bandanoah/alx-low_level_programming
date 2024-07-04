@@ -1,33 +1,27 @@
-#include <stdio.h>
-#include <string.h>
+#include "main.h"
+/**
+ * _strncpy - copy a string
+ * @dest: input value
+ * @src: input value
+ * @n: input value
+ *
+ * Return: dest
+ */
+char *_strncpy(char *dest, char *src, int n)
+{
+	int j;
 
-char *_strncpy(char *dest,char *src, int n);
+	j = 0;
+	while (j < n && src[j] != '\0')
+	{
+		dest[j] = src[j];
+		j++;
+	}
+	while (j < n)
+	{
+		dest[j] = '\0';
+		j++;
+	}
 
-char *_strncpy(char *dest,char *src, int n){
-
-    int i = 0;
-    int j = 0;
-
-    while(dest[i] != '\0'){
-        i++;
-    }
-    int t = strlen(src);
-    while(src[j] != '\0' && t < n){
-        dest[i] = src[j];
-        i++;
-        j++;
-    }
-    dest[i] = '\0';
-
-    return dest;
-}
-
-int main (void){
-
-    char s1 [100];
-    char s2 [] = "The weather today is wonderful ";
-    
-    char *copy = _strncpy(s1,s2,90);
-    printf("%s\n",copy);
-    return 0;
+	return (dest);
 }
