@@ -1,5 +1,11 @@
-#include <stdio.h>
+#include "main.h"
 
+/**
+ * cap_string - Capitalizes all words of a string.
+ * @str: The string to be capitalized.
+ *
+ * Return: A pointer to the changed string.
+ */
 char *cap_string(char *str)
 {
 	int index = 0;
@@ -29,13 +35,4 @@ char *cap_string(char *str)
 	}
 
 	return (str);
-}
-int main (void){
-    char str[]="Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
-    
-    char *p = cap_string(str);
-    printf("%s",str);
-    printf("%s",p);
-
-    return 0;
 }

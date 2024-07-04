@@ -1,27 +1,20 @@
-#include <stdio.h>
+#include "main.h"
+/**
+ * string_toupper - change all lowercase to uppercase
+ * @n: pointer
+ *
+ * Return: n
+ */
+char *string_toupper(char *n)
+{
+	int i;
 
-char *string_toupper(char *str);
-
-char *string_toupper(char *str){
-
-    int i = 0;
-    int diff = 32;
-    while (str[i] != '\0')
-    {
-        if(str[i] >= 'a' && str[i] <= 'z' ){
-            str[i] -= diff;
-            i++;
-        }
-       
-    }
-    printf("%s",str);
-    printf("\n");
-
-    return str;
-}
-int main (void){
-    char str[] = "pure";
-    string_toupper(str);
-
-    return 0;
+	i = 0;
+	while (n[i] != '\0')
+	{
+		if (n[i] >= 'a' && n[i] <= 'z')
+			n[i] = n[i] - 32;
+		i++;
+	}
+	return (n);
 }
