@@ -1,19 +1,12 @@
-#include <stdio.h>
+#include "main.h"
 
-void set_string(char **s, char *to);
+/**
+ * set_string -  Sets the value of a pointer to a char
+ * @s: The pointer
+ * @to: The char
+ */
 
-void set_string(char **s, char *to){
-    // in order to have s to point to the value stored in to 
-    *s = to;
-
-
-}
-int main(void)
+void set_string(char **s, char *to)
 {
-    char *s0 = "Bob Dylan";
-    char *s1 = "Robert Allen";
-
-    printf("%s, %s\n", s0, s1);
-    set_string(&s1, s0);
-    printf("%s, %s\n", s0, s1);
+	*s = to;
 }

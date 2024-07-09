@@ -1,28 +1,28 @@
-#include <stdio.h>
-/*
+#include "main.h"
+/**
+ * _strspn - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
+ */
+unsigned int _strspn(char *s, char *accept)
+{
+	unsigned int n = 0;
+	int r;
 
-*/
-
-char *_strpbrk(char *s, char *accept);
-
-char *_strpbrk(char *s, char *accept){
-    int i,j,count;
-    for (j = 0; s[j]!= '\0'; j++){
-        for (i = 0; accept[i] != '\0'; i++){
-            if (s[j] ==  accept[i]){
-                return &s[j];
-            }
-        }
-    }
-
-    return NULL;
-}
-int main (void){
-    char *s = "hello, world";
-    char *f = "world";
-    char *t;
-    t = _strpbrk(s,f);
-    printf("%s\n", t);
-
-    return 0;
+	while (*s)
+	{
+		for (r = 0; accept[r]; r++)
+		{
+			if (*s == accept[r])
+			{
+				n++;
+				break;
+			}
+			else if (accept[r + 1] == '\0')
+				return (n);
+		}
+		s++;
+	}
+	return (n);
 }
