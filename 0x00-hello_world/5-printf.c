@@ -1,11 +1,3 @@
-/*
- * File: piece_of_art.c
- * Author: [Your Name]
- *
- * This program prints a piece of art with proper grammar using the printf function.
- * It demonstrates how to use printf to output formatted text to the standard output.
- */
-
 #include <stdio.h>
 
 /**
