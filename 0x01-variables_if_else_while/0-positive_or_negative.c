@@ -12,26 +12,29 @@
  */
 int main(void)
 {
-    int n;
+	int n;
 
-    srand(time(0));
-    n = rand() - RAND_MAX / 2;
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 
-    if (n > 0)
-    {
-        const char *p = "is positive";
-        printf("%d %s\n", n, p);
-    }
-    else if (n == 0)
-    {
-        const char *z = "is zero";
-        printf("%d %s\n", n, z);
-    }
-    else
-    {
-        const char *g = "is negative";
-        printf("%d %s\n", n, g);
-    }
+	if (n > 0)
+	{
+		const char *p = "is positive";
 
-    return (0);
+		printf("%d %s\n", n, p);
+	}
+	else if (n == 0)
+	{
+		const char *z = "is zero";
+
+		printf("%d %s\n", n, z);
+	}
+	else
+	{
+		const char *g = "is negative";
+
+		printf("%d %s\n", n, g);
+	}
+
+	return (0);
 }
