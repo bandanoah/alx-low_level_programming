@@ -1,18 +1,21 @@
 #include <stdio.h>
 
-int main ()
+/**
+ * main - Entry point of the program
+ * 
+ * Description: prints out alphabet in lowercase followed by a new line
+ * 
+ * Return: Always 0 (Sucess)
+ */
+int main (void)
 {
+    char c = 'a';
 
-    char letter ='a';
-
-
-    while (letter <= 'z')
+    for (; c <= 'z'; c++ )
     {
-
-        putchar(letter);
-        letter++;
+        putchar(c);
+        
     }
-
     putchar('\n');
 
     return 0;
