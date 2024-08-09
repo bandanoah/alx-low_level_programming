@@ -1,14 +1,21 @@
 #include <stdio.h>
-
-int main (void)
+/**
+ * main - Entry point of the program
+ * Description: prints out all single digit numbers of base 10
+ * starting form 0
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
-    int b;
+int n;
 
-    for (b =0; b < 10; b++)
-    {
-
-        putchar('0' + b);
-    }
-    putchar('\n');
-    return 0;
+for (n = 0; n <= 9; n++)
+{
+/*n is converted into its corresponding character in ASCII*/
+/*ASCII value 0 is 48 by adding n we get the ASCII value for n*/
+/*The integers are printed out as character*/
+putchar('0' + n);
+}
+putchar('\n');
+return (0);
 }
